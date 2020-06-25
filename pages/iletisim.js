@@ -11,7 +11,7 @@ const Title = styled.h1`
         line-height: 2.5rem;
     }
 `
-const SubTitle = styled.h3`
+const SubTitle = styled.h2`
     font-size: 1.25rem;
     line-height: 1.25rem;
     z-index: 2;

@@ -97,10 +97,9 @@ const CallNow = styled.a`
     top: 1rem;
     right: 1rem;
     padding: .5rem 1rem;
-    font-weight: bold;
-    font-size: .85rem;
-    background-color: ${({ theme }) => theme.colors.buttonPrimary};
-    color: #fff;
+    font-size: .9rem;
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
+    color: ${({ theme }) => theme.colors.buttonPrimary};
 `
 
 const Layout = ({ children }) => {
