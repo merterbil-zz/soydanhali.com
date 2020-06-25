@@ -5,19 +5,55 @@ const Title = styled.h1`
     font-size: 4rem;
     line-height: 4rem;
     color: ${({ theme }) => theme.colors.buttonPrimary};
+    z-index: 1;
     @media (max-width: 576px) {
         font-size: 2.5rem;
         line-height: 2.5rem;
     }
 `
-const Text = styled.p``
+const Text = styled.p`
+    font-size: .9rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+`
 const Section = styled.section`
-    margin-top: auto;
-    margin-bottom: auto;
+    position: relative;
+    display: grid;
     padding: 3rem;
     @media (max-width: 576px) {
         padding: 1.5rem;
     }
+`
+const Background = styled.div`
+    position: relative;
+    height: 40vh;
+    z-index: 0;
+    overflow: hidden;
+    margin: -3rem -3rem -6rem -3rem;
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    @media (max-width: 576px) {
+        height: auto;
+        margin: -1.5rem;
+    }
+`
+const Gradient = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, ${({ theme }) => theme.colors.bgSecondary});
+    z-index: 1;
 `
 
 const Hakkimizda = () => <>
@@ -26,6 +62,10 @@ const Hakkimizda = () => <>
         description="Soydan halı yıkama ile ilgili detaylı bilgiye bu sayfadan ulaşabilirsiniz."
         canonical="https://soydanhali.com/hakkimizda" />
     <Section>
+        <Background>
+            <img src="2.jpg" alt="Soydan halı yıkama" />
+            <Gradient />
+        </Background>
         <Title>Hakkımızda</Title>
         <Text>Eskişehir Soydan Halı Yıkama, her evde bulunan halı, stor perde, yorgan, battaniye gibi ürünlerin derinlemesine temizlenmesini, overlok hizmetiyle ise yıpranmış ürünlerin kesilip temizlenerek yeniden kullanılabilir hale gelmesi sağlanmaktadır.</Text>
         <Text>Shaggy halı, yün halı gibi en sık tercih edilen, kullanımı kolay ancak temizlenmesi hem zaman hem de profesyonel makineler isteyen ürünler, Soydan Halı Yıkama ile kolayca temizlenmektedir. Önceden belirlenen gün ve saatte evlerinizden alınan ürünler, adresinizden çıktıktan sonra ekibimizin deneyimli ellerine emanettir.</Text>

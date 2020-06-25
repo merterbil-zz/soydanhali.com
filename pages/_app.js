@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Router from 'next/router'
 import { ThemeProvider } from 'styled-components'
-import { pageView } from 'utils/gtag'
+import { pageView } from 'lib/utils/gtag'
 import Layout from 'components/Layout'
 
 const theme = {

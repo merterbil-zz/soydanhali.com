@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { GA_TRACKING_ID } from 'utils/gtag'
+import { GA_TRACKING_ID } from 'lib/utils/gtag'
 
 class MyDocument extends Document {
 

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styled, { createGlobalStyle } from 'styled-components'
 import Link from 'next/link'
-import Font from 'utils/font'
+import Font from 'lib/utils/font'
 
 const GlobalStyle = createGlobalStyle`
     html,
@@ -42,7 +42,7 @@ const App = styled.div`
 const SideBar = styled.div`
     background-color: ${({ theme }) => theme.colors.bgPrimary};
     display: grid;
-    grid-template-rows: 4rem 1fr 6rem;
+    grid-template-rows: 4rem calc(100vh - 12rem) 8rem;
 `
 const NavLink = styled.a`
     display: grid;
@@ -70,7 +70,7 @@ const Icon = styled.svg`
 `
 const SiteNav = styled.nav`
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 4rem;
     grid-auto-rows: 4rem;
     margin-top: auto;
     margin-bottom: auto;
@@ -78,15 +78,11 @@ const SiteNav = styled.nav`
 const SocialNav = styled.nav`
     display: grid;
     grid-template-columns: 4rem;
-    grid-auto-rows: 3rem;
+    grid-auto-rows: 4rem;
 `
 const Page = styled.main`
-    display: grid;
-    grid-template-columns: 70%;
+    position: relative;
     overflow: auto;
-    @media (max-width: 1100px) {
-        grid-template-columns: 1fr;
-    }
 `
 const Avatar = styled.img`
     width: 32px;
