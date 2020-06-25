@@ -91,6 +91,17 @@ const Avatar = styled.img`
     object-position: center center;
     margin: 1rem;
 `
+const CallNow = styled.a`
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    font-size: .85rem;
+    background-color: ${({ theme }) => theme.colors.buttonPrimary};
+    color: #fff;
+`
 
 const Layout = ({ children }) => {
     const router = useRouter()
@@ -139,6 +150,7 @@ const Layout = ({ children }) => {
                 </SocialNav>
             </SideBar>
             <Page>{children}</Page>
+            <CallNow href="tel:+905413696005">Hemen Ara</CallNow>
         </App>
     </>
 }

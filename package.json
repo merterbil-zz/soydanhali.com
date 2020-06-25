@@ -1,7 +1,7 @@
 {
     "name": "soydanhali.com",
     "version": "1.0.0",
-    "description": "Website for Soydan Halı Yıkama",
+    "description": "Soydan Halı Yıkama web arayüzü",
     "main": "index.js",
     "scripts": {
         "dev": "next",
@@ -26,6 +26,7 @@
     "dependencies": {
         "fontfaceobserver": "^2.1.0",
         "next": "^9.4.4",
+        "next-pwa": "^2.6.1",
         "next-seo": "^4.5.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
