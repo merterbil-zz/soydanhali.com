@@ -96,10 +96,11 @@ const CallNow = styled.a`
     position: fixed;
     top: 1rem;
     right: 1rem;
-    padding: .5rem 1rem;
-    font-size: .9rem;
-    background-color: ${({ theme }) => theme.colors.bgPrimary};
-    color: ${({ theme }) => theme.colors.buttonPrimary};
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: ${({ theme }) => theme.colors.buttonPrimary};
+    color: ${({ theme }) => theme.colors.textPrimary};
 `
 
 const Layout = ({ children }) => {
